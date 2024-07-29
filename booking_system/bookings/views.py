@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
+from django.http import HttpResponse
 from .models import Booking
 from .forms import BookingForm
 
@@ -20,3 +22,10 @@ def create_booking(request):
     else:
         form = BookingForm()
     return render(request, 'bookings/create_booking.html', {'form': form})
+
+def debug_settings(request):
+    base_dir = settings.BASE_DIR
+    template_dirs = settings.TEMPLATES[0]['DIRS']
+    app_dirs = settings.TEMPLATES[0]['APP_DIRS']
+    installed_apps = settings.INSTALLED_APPS
+    return HttpResponse(f"BASE_DIR: {base_dir}\nTemplate dirs: {template_dirs}\nAPP_DIRS: {app_dirs}\nInstalled Apps: {installed_apps}")
