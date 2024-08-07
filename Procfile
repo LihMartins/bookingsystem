@@ -1,1 +1,1 @@
-web: cd booking_system && gunicorn booking_system.wsgi
+web: gunicorn booking_system.booking_system.wsgi:application
