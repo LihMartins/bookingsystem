@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% load static %}  <!-- Load the static template tag library -->
+
+{% block body %}
+<div class="container mt-5">
+    <h2 class="mb-4">Pet Center</h2>
+    <div class="row">
+        {% for pet in pets %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                {% if pet.profile_photo %}
+                <img src="{{ pet.profile_photo.url }}" class="card-img-top" alt="{{ pet.first_name }}">
+                {% else %}
+                <img src="{% static 'default_pet_photo.jpg' %}" class="card-img-top" alt="Default Photo">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ pet.first_name }} {{ pet.last_name }}</h5>
+                    <p class="card-text">Birth Date: {{ pet.date_of_birth }}</p>
+                    <p class="card-text">Gender: {{ pet.get_gender_display }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>No pets registered.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

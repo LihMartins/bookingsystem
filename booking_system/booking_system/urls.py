@@ -1,8 +1,7 @@
-"""
-URL configuration for booking_system project.
+"""clinic URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth import views as auth_views
-from bookings.views import debug_settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('bookings.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('debug/', debug_settings, name='debug_settings'),
+    path('', include("booking.urls")),
+    path('user', include("members.urls")),
+    path('pets/', include("pets.urls")),
 ]
