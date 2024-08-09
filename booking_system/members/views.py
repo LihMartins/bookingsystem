@@ -3,7 +3,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterUserForm
-from django.core.mail import send_mail
 
 def login_user(request):
     if request.method == "POST":

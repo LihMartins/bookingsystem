@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -56,7 +57,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'booking_system.urls'
+print("MIDDLEWARE settings:")
+print(MIDDLEWARE)
+
+
+ROOT_URLCONF = 'project_core.urls'
 
 TEMPLATES = [
     {
@@ -78,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'booking_system.wsgi.application'
+WSGI_APPLICATION = 'project_core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -124,6 +129,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+# WhiteNoise settings for serving static files
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Media files (user-uploaded content)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -136,3 +144,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'booking_list'
 LOGIN_URL = 'login'
 LOGOUT_REDIRECT_URL = 'login'
+
+# Activate Django-Heroku.
+import django_heroku
+django_heroku.settings(locals())
