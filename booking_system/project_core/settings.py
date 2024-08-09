@@ -57,8 +57,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-print("MIDDLEWARE settings:")
-print(MIDDLEWARE)
+# Debugging MIDDLEWARE ISSUE
+# print("MIDDLEWARE settings:")
+# print(MIDDLEWARE)
 
 
 ROOT_URLCONF = 'project_core.urls'
