@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import environ
 import dj_database_url
+import django_heroku
 from pathlib import Path
 
 # Initialize environment variables
@@ -147,5 +148,4 @@ LOGIN_URL = 'login'
 LOGOUT_REDIRECT_URL = 'login'
 
 # Activate Django-Heroku.
-import django_heroku
 django_heroku.settings(locals())
