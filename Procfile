@@ -1,1 +1,1 @@
-web: gunicorn project_core.wsgi --log-file -
+web: gunicorn booking_system.project_core.wsgi --log-file -
