@@ -1,12 +1,12 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %}  <!-- Extends from the base layout template to maintain consistent page structure and styling -->
 
-{% block body %}
+{% block body %}  <!-- Defines the main content block that the base layout will render -->
 <div class="container mt-4">
-    <h2>Register Pet</h2>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Register</button>
+    <h2>Register Pet</h2>  <!-- Heading for the pet registration form -->
+    <form method="post" enctype="multipart/form-data">  <!-- Form setup to handle file uploads along with other form data -->
+        {% csrf_token %}  <!-- Security feature to prevent CSRF attacks -->
+        {{ form.as_p }}  <!-- Renders the form fields wrapped in <p> tags -->
+        <button type="submit" class="btn btn-primary">Register</button>  <!-- Submit button for the form -->
     </form>
 </div>
-{% endblock %}
+{% endblock %}  <!-- End of the main content block -->
