@@ -86,17 +86,16 @@ def bookingSubmit(request):
 def userPanel(request):
     user = request.user
     appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
+    pets = Pet.objects.filter(owner=user)  # Retrieve all pets for the user
 
-    try:
-        pet = Pet.objects.get(owner=user)
-    except Pet.DoesNotExist:
-        pet = None
-        messages.info(request, 'No pet registered yet.')
+    # Check if no pets are registered and provide a placeholder if needed
+    if not pets.exists():
+        pets = [{'first_name': 'No pets registered'}]  # Example placeholder as a list of dictionaries
 
     context = {
         'user': user,
         'appointments': appointments,
-        'pet': pet,
+        'pets': pets,
     }
     return render(request, 'userPanel.html', context)
 
