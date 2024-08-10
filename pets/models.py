@@ -1,3 +1,12 @@
+"""
+This module defines the `Pet` model, representing a pet owned by a user in the system.
+
+The `Pet` model includes attributes such as the owner's user reference, the pet's name,
+birth date, gender, and an optional profile photo. This model serves as the foundation
+for managing and displaying pet-related data within the application, allowing users
+to register and maintain information about their pets.
+"""
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -30,6 +39,6 @@ class Pet(models.Model):
         Returns the string representation of the pet.
 
         Returns:
-            str: The full name of the pet.
+        str: The full name of the pet.
         """
         return f"{self.first_name} {self.last_name}"
