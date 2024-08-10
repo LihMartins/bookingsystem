@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from datetime import datetime, timedelta
-from .models import *
+# In userPanel view
+from .models import Pet, Appointment
+# If another view needs different models, it should import those specifically:
+from .models import SomeOtherModel
 from django.contrib import messages
 
 def index(request):
@@ -86,10 +90,19 @@ def bookingSubmit(request):
 def userPanel(request):
     user = request.user
     appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
-    return render(request, 'userPanel.html', {
-        'user':user,
-        'appointments':appointments,
-    })
+
+    try:
+        pet = Pet.objects.get(owner=user)
+    except Pet.DoesNotExist:
+        pet = None
+        messages.info(request, 'No pet registered yet.')
+
+    context = {
+        'user': user,
+        'appointments': appointments,
+        'pet': pet,
+    }
+    return render(request, 'userPanel.html', context)
 
 def userUpdate(request, id):
     appointment = Appointment.objects.get(pk=id)
