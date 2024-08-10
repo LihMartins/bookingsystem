@@ -1,10 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
 from datetime import datetime, timedelta
-# In userPanel view
-from .models import Pet, Appointment
-# If another view needs different models, it should import those specifically:
-from .models import SomeOtherModel
+from .models import *
+from pets.models import Pet
 from django.contrib import messages
 
 def index(request):
@@ -16,7 +13,6 @@ def booking(request):
 
     #Only show the days that are not full:
     validateWeekdays = isWeekdayValid(weekdays)
-
 
     if request.method == 'POST':
         service = request.POST.get('service')
