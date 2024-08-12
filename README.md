@@ -63,24 +63,24 @@ The Booking System project has several planned enhancements to improve functiona
 
 To successfully run and deploy this project, the following Python packages and dependencies are required:
 
-`asgiref==3.8.1
-dj-database-url==2.2.0
-Django==5.0.7
-django-environ==0.11.2
-django-heroku==0.3.1
-gunicorn==22.0.0
-packaging==24.1
-pillow==10.4.0
-psycopg2==2.9.9
-psycopg2-binary==2.9.9
-sqlparse==0.5.0
-typing_extensions==4.12.2
-tzdata==2024.1
-waitress==3.0.0
-whitenoise==6.7.0`
+- asgiref==3.8.1
+- dj-database-url==2.2.0
+- Django==5.0.7
+- django-environ==0.11.2
+- django-heroku==0.3.1
+- gunicorn==22.0.0
+- packaging==24.1
+- pillow==10.4.0
+- psycopg2==2.9.9
+- psycopg2-binary==2.9.9
+- sqlparse==0.5.0
+- typing_extensions==4.12.2
+- tzdata==2024.1
+- waitress==3.0.0
+- whitenoise==6.7.0
 
 Make sure to install these dependencies using pip by running the following command:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 This command ensures that all necessary packages are installed and properly configured.
 
