@@ -39,10 +39,6 @@ This application offers significant value to both clients and clinic staff by st
 
 - **Streamlined Administration:** For clinic staff, the app simplifies appointment management, reduces manual paperwork, and enhances operational efficiency by centralising booking management.
 
-### Future Enhancements
-
-- **Upcoming Features:** Look forward to additional features such as online payment options, automated appointment reminders, and comprehensive reports and analytics that will further enhance your experience.
-
 ## Features
 
 - **User Authentication:** Basic user registration and login system.
@@ -61,6 +57,7 @@ The Booking System project has several planned enhancements to improve functiona
 - **Notification System:** Integrating a system to send email or SMS reminders for upcoming appointments.
 - **Enhanced User Interface:** Refining the user interface for a more polished and intuitive experience.
 - **Reports and Analytics:** Developing tools to provide the clinic with valuable insights into appointment trends and service usage, aiding in effective management.
+- **Contact Page and Services Offered Pages:** While the contact page and services offered pages are included as examples in the current implementation, they will be tailored to meet the specific needs of my family's business. These pages will be customised to provide relevant contact information and a detailed list of services offered by the clinic.
 
 ## Requirements
 
