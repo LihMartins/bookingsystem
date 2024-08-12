@@ -91,8 +91,6 @@ This project uses the following frontend frameworks and libraries:
 
 **Bootstrap 5.2.1:** Employed for responsive design and styling throughout the project, integrated via CDN.
 
-**Bootstrap 5.2.1:** Employed for responsive design and styling throughout the project, integrated via CDN.
-
 **HTML:**
 `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">`
 
@@ -104,8 +102,10 @@ The application has been manually tested to ensure that all features work as exp
 
 ## Validator Checker
 
-**Python**
-**Booking**
+### Python
+
+#### Booking
+
 **app.py**
 ![Booking app.py](./images/bookingappvalidator.PNG)
 
@@ -121,7 +121,8 @@ The application has been manually tested to ensure that all features work as exp
 **views.py**
 Booking views.py image validator checker could not be provided due to code exceeding the number of characters accepted by the checker, but code has been formatted accordingly to the guide.
 
-**Members**
+#### Members
+
 **app.py**
 ![Members app.py](./images/membersappvalidator.PNG)
 
@@ -134,7 +135,8 @@ Booking views.py image validator checker could not be provided due to code excee
 **views.py**
 ![Members views.py](./images/membersviewsvalidator.PNG)
 
-**Pets**
+#### Pets
+
 **app.py**
 ![Pets app.py](./images/petsappvalidaotr.PNG)
 
@@ -150,7 +152,8 @@ Booking views.py image validator checker could not be provided due to code excee
 **views.py**
 ![Pets views.py](./images/petsviewsvalidator.PNG)
 
-**Project Core**
+#### Project Core
+
 **asgi.py**
 ![Project Core asgi.py](./images/projectcoreasgivalidator.PNG)
 
