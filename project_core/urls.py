@@ -21,14 +21,16 @@ from django.conf.urls.static import static
 # Define the URL patterns for the project
 urlpatterns = [
     path('admin/', admin.site.urls),  # URL pattern for the admin site
-    path('', include("booking.urls")),  # Include URL patterns from the booking app
-    path('user/', include("members.urls")),  # Include URL patterns from the members app
-    path('pets/', include("pets.urls")),  # Include URL patterns from the pets app
+    path('', include("booking.urls")),  # Include URL patterns from booking app
+    path('user/', include("members.urls")),  # Include URL patterns from members app
+    path('pets/', include("pets.urls")),  # Include URL patterns from pets app
 ]
 
 # Serve media files during development
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )
     """
     When in development mode (DEBUG=True), serve media files from the
     MEDIA_ROOT directory. This is necessary for handling user-uploaded content,
