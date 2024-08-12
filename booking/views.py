@@ -50,6 +50,9 @@ def booking(request):
     weekdays = valid_weekday(22)
     validate_weekdays = is_weekday_valid(weekdays)
 
+    #debugging
+    print(validate_weekdays)
+
     if request.method == 'POST':
         service = request.POST.get('service')
         day = request.POST.get('day')
