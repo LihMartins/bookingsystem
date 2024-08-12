@@ -1,6 +1,7 @@
 """
-This module provides views for managing the registration and listing of pets
-within the application.
+This module provides views for managing pet registration.
+
+Also listing within the application.
 
 The `register_pet` view handles the form submission for adding new pets,
 ensuring that only authenticated users can register a pet and associating

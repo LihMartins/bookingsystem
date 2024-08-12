@@ -50,7 +50,7 @@ def booking(request):
     weekdays = valid_weekday(22)
     validate_weekdays = is_weekday_valid(weekdays)
 
-    #debugging
+    # debugging
     print(validate_weekdays)
 
     if request.method == 'POST':
@@ -74,8 +74,9 @@ def booking(request):
 
 def booking_submit(request):
     """
-    Handle the final submission of a booking by validating the selected
-    date and time.
+    Handle the final submission of a booking.
+
+    By validating the selected date and time.
 
     Ensures that the selected time is available and within the valid range
     before saving the appointment.
@@ -122,7 +123,8 @@ def booking_submit(request):
                             return redirect('index')
                         else:
                             messages.success(
-                                request, "The selected time has been reserved before!"
+                                request,
+                                "The selected time has been reserved before!"
                             )
                     else:
                         messages.success(request, "The selected day is full!")
@@ -130,7 +132,8 @@ def booking_submit(request):
                     messages.success(request, "The selected date is incorrect")
             else:
                 messages.success(
-                    request, "The selected date isn't in the correct time period!"
+                    request,
+                    "The selected date isn't in the correct time period!"
                 )
         else:
             messages.success(request, "Please select a service!")
@@ -215,7 +218,8 @@ def user_update(request, id):
                 return redirect('user_update_submit', id=id)
             else:
                 messages.error(
-                    request, "The appointment must be updated at least 24 hours in advance."
+                    request,
+                    "The appointment must be updated at least 24 hours in advance."
                 )
         else:
             messages.error(request, "The selected date is not valid.")
@@ -284,7 +288,8 @@ def user_update_submit(request, id):
                             return redirect('index')
                         else:
                             messages.success(
-                                request, "The selected time has been reserved before!"
+                                request,
+                                "The selected time has been reserved before!"
                             )
                     else:
                         messages.success(request, "The selected day is full!")
@@ -292,7 +297,8 @@ def user_update_submit(request, id):
                     messages.success(request, "The selected date is incorrect")
             else:
                 messages.success(
-                    request, "The selected date isn't in the correct time period!"
+                    request,
+                    "The selected date isn't in the correct time period!"
                 )
         else:
             messages.success(request, "Please select a service!")
@@ -306,7 +312,7 @@ def user_update_submit(request, id):
 
 def staff_panel(request):
     """
-    Displays the staff panel with a list of upcoming appointments.
+    Display the staff panel with a list of upcoming appointments.
 
     Retrieves and displays appointments scheduled within the next 21 days,
     ordered by day and time.
@@ -335,7 +341,7 @@ def staff_panel(request):
 
 def day_to_weekday(x):
     """
-    Converts a date string to the corresponding weekday name.
+    Convert a date string to the corresponding weekday name.
 
     Args:
         x (str): The date string in the format 'YYYY-MM-DD'.
@@ -350,7 +356,9 @@ def day_to_weekday(x):
 
 def valid_weekday(days):
     """
-    Generates a list of valid weekdays (Monday, Wednesday, and Saturday)
+    Generate a list of valid weekdays.
+
+    (Monday, Wednesday, and Saturday),
     within the next specified number of days.
 
     Args:
@@ -371,7 +379,7 @@ def valid_weekday(days):
 
 def is_weekday_valid(x):
     """
-    Filters out weekdays that are fully booked.
+    Filter out weekdays that are fully booked.
 
     Args:
         x (list): A list of weekdays as strings in the format 'YYYY-MM-DD'.
@@ -388,7 +396,7 @@ def is_weekday_valid(x):
 
 def check_time(times, day):
     """
-    Filters out times that have already been selected for a specific day.
+    Filter out times that have already been selected for a specific day.
 
     Args:
         times (list): A list of time slots.
@@ -406,8 +414,9 @@ def check_time(times, day):
 
 def check_edit_time(times, day, id):
     """
-    Filters out time slots that have already been selected, excluding the
-    current appointment's time.
+    Filter out time slots that have already been selected.
+
+    Excluding the current appointment's time.
 
     Args:
         times (list): A list of time slots.

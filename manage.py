@@ -1,6 +1,15 @@
-"""Django's command-line utility for administrative tasks."""
+"""
+Django's command-line utility for administrative tasks.
+
+This module provides the main entry point for running administrative tasks
+in a Django project. It sets the default Django settings module and handles
+the execution of commands through Django's management system.
+"""
+
 import os
 import sys
+
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_core.settings')

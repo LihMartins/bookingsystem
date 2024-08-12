@@ -1,3 +1,11 @@
+"""
+This module sets environment variables for the Django project.
+
+It includes configurations such as the secret key, debug mode,
+allowed hosts, and the database URL. These settings are essential
+for the secure and proper functioning of the Django application.
+"""
+
 import os
 
 os.environ["SECRET_KEY"] = 'django-insecure-8us@c&7q&bdifzq(g7dpfj=#wgs&$6tc82zi1@$rjla7enqb=+'

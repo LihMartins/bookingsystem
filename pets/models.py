@@ -1,6 +1,7 @@
 """
-This module defines the `Pet` model, representing a pet owned by a user in
-the system.
+This module defines the `Pet` model.
+
+Representing a pet owned by a user in the system.
 
 The `Pet` model includes attributes such as the owner's user reference, the
 pet's name, birth date, gender, and an optional profile photo. This model
@@ -42,7 +43,7 @@ class Pet(models.Model):
 
     def __str__(self):
         """
-        Returns the string representation of the pet.
+        Return the string representation of the pet.
 
         Returns:
             str: The full name of the pet.
