@@ -275,6 +275,18 @@ This project was made possible through the support and resources provided by var
 
 The code structure and logic used in this project are credited to **[John Abdsho's Clinic Booking Project](https://github.com/abdsho/clinic-booking)**. His work served as a significant reference point and foundation for my development process.
 
+## Tools
+
+This project was developed using the following tools:
+
+- **Visual Studio Code (VSCode)**: The primary code editor used for the development of this project. VSCode provided a powerful, yet lightweight, environment for writing, debugging, and managing the project code. Its extensive library of extensions, integrated terminal, and Git support greatly enhanced the efficiency and effectiveness of the development process.
+
+Other tools and resources were also employed throughout the development, including:
+
+- **Git**: Version control system used to manage the project's source code.
+- **Heroku**: Platform as a service (PaaS) used for deploying and hosting the application.
+- **PostgreSQL**: The database management system used to handle data storage and retrieval in the production environment.
+
 ## Contributing
 
 This project is still in development, and contributions are welcome! If you have any ideas or suggestions, feel free to submit a pull request or open an issue.
