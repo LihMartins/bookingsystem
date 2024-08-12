@@ -226,7 +226,7 @@ Booking views.py image validator checker could not be provided due to code excee
 
 - **Issue:** When deploying the Django project to Heroku, the application failed with a `ModuleNotFoundError: No module named 'booking_system'`, even though the application worked perfectly on the local server.
 - **Cause:** With the help of my tutor, we were able to identify that the issue was likely due to the structure of the project, where the directories were nested and not located in the root directory. This structure caused discrepancies between the local and Heroku environments, leading to incorrect paths or environment settings in Heroku, despite the local configurations being correct
-- **Resolution:** To resolve the issue, we moved all directories and files, including manage.py, to the root of the project. This adjustment ensured that Heroku could correctly locate and load the necessary modules during deployment.
+- **Resolution:** To resolve the issue, I've moved all directories and files, including manage.py, to the root of the project. This adjustment ensured that Heroku could correctly locate and load the necessary modules during deployment.
 - **Current Status:** After relocating the files to the project root, the Heroku deployment succeeded. The local server on VSCode continues to function correctly, confirming that the issue was specific to the project's directory structure in the Heroku environment. The app is now working perfectly after these changes.
 
 ## Deployment
